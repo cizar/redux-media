@@ -1,0 +1,33 @@
+{
+  "name": "redux-media",
+  "version": "0.0.1",
+  "description": "Responsive state in the store",
+  "main": "lib/redux-media.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "dev": "babel src --out-dir lib --watch",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cizar/redux-media.git"
+  },
+  "keywords": [
+    "redux",
+    "mediaquery",
+    "responsive",
+    "react"
+  ],
+  "author": "Cesar Kastli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cizar/redux-media/issues"
+  },
+  "homepage": "https://github.com/cizar/redux-media#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
