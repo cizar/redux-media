@@ -24,7 +24,7 @@ export default (config) => (createStore) => (...args) => {
   const store = createStore(...args)
   Object.keys(config).forEach((key) => {
     const mql = matchMedia(config[key])
-    mql.addEventListener('change', ({ matches }) => 
+    mql.addListener(({ matches }) => 
       store.dispatch(mediaChanged(key, matches))
     )
     store.dispatch(mediaChanged(key, mql.matches))
