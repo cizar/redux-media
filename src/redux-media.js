@@ -23,7 +23,7 @@ export const reducer = (state = initialState, { type, media, matches }) => {
 export default (config) => (createStore) => (...args) => {
   const store = createStore(...args)
   Object.keys(config).forEach((key) => {
-    const mql = matchMedia(config[key])
+    const mql = window.matchMedia(config[key])
     mql.addListener(({ matches }) => 
       store.dispatch(mediaChanged(key, matches))
     )
