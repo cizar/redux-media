@@ -9,7 +9,7 @@ npm install redux-media --save-dev
 ## Import the store enhancer and the reducer
 
 ```js
-import media, { mediaReducer } from 'redux-media'
+import reduxMedia, { reducer as mediaReducer } from 'redux-media'
 ```
 
 ## Configure
@@ -34,7 +34,7 @@ const rootReducer = combineReducers({ ...reducers, router: routerReducer, media:
 const store = createStore(rootReducer,
   compose(
     applyMiddleware(thunk),
-    media(mediaOptions)
+    reduxMedia(mediaOptions)
   )
 )
 ```

@@ -8,7 +8,7 @@ const mediaChanged = (media, matches) => ({
 
 const initialState = {}
 
-export const mediaReducer = (state = initialState, { type, media, matches }) => {
+export const reducer = (state = initialState, { type, media, matches }) => {
   switch (type) {
     case MEDIA_CHANGED:
       return {
