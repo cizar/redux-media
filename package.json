@@ -1,6 +1,6 @@
 {
   "name": "redux-media",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Responsive state in the store",
   "main": "lib/redux-media.js",
   "scripts": {
