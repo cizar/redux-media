@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm install redux-media --save-dev
+npm install --save redux-media
 ```
 
 ## Import the store enhancer and the reducer
@@ -25,15 +25,19 @@ const mediaOptions = {
 ## Combine the media reducer
 
 ```js
-const rootReducer = combineReducers({ ...reducers, router: routerReducer, media: mediaReducer })
+const rootReducer = combineReducers({
+  ...reducers,
+  media: mediaReducer
+})
 ```
 
 ## Create the store
 
 ```js
-const store = createStore(rootReducer,
+const store = createStore(
+  rootReducer,
   compose(
-    applyMiddleware(thunk),
+    applyMiddleware(...middlewares),
     reduxMedia(mediaOptions)
   )
 )
